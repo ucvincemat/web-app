@@ -1,3 +1,4 @@
+
 # DRG Seed Bank
 
 **Deep Rock Galactic Seed Bank**, or DRG Seed is a database project for cataloging mission seeds for the game, Deep Rock Galactic. It can serve as a pretty good tool for tracking and managing procedural generation data for missions.
@@ -13,7 +14,8 @@ The seed can easily be identified by first going into a mission. Once the map ha
 It is pretty simple.
 
 To **View** Seed Bank:
-1.  Go to *(insert website link here)*
+1. Go to [Render Website](https://drg-seed-bank.onrender.com/).
+2. Or.. check [how to run it locally.](#how-do-i-run-drg-seed-bank-locally)
 
 To **Add** Seeds:
 1. Click the ``Add New Seed`` button on the top to open up a modal window.
