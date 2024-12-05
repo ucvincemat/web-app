@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>DRG Seed Bank</title>
+	<link rel="icon" href="apoca.webp" type="image/x-icon">
+	
+	<link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<section id="content">
+	
+	<h1>Deep Rock Galactic's<br>Intergalactic Seed Bank</h1>
+	
+	<button id="addSeedBtn">Add New Seed</button>
+
+	<div id="seedModal" class="modal">
+		<div class="modal-content">
+			<span class="close" id="closeModal">&times;</span>
+			<h3 id="modalTitle">Add New Seed</h3>
+			<form id="seedForm" action="/api/seeds" method="POST">
+				<input type="text" id="game_version" placeholder="Game Version" required>
+				<h4> Seed </h4>
+				<input type="number" id="seed_g" placeholder="G" required>
+				<input type="number" id="seed_m" placeholder="M" required>
+				<input type="number" id="seed_p" placeholder="P" required>
+				<input type="text" id="season" placeholder="Season (S1, S2, ..)" required>
+				<h4> Mission </h4>
+				<input type="text" id="primary_obj" placeholder="Primary Mission" required>
+				<input type="text" id="secondary_obj" placeholder="Secondary Mission" required>
+				<input type="number" id="complexity" placeholder="Complexity" min="1" max="3" required>
+				<input type="number" id="length" placeholder="Length" min="1" max="3" required>
+				<h4> Events </h4>
+				<input type="text" id="machine_event" placeholder="Machine Event (Optional)">
+				<input type="number" id="data_cell" placeholder="Data Cell (0-1)" min="0" max="1">
+				<input type="number" id="core_stone" placeholder="Core Stone (0-1)" min="0" max="1">
+				<input type="number" id="plagueheart" placeholder="Plaguehearts (0+)" min="0">
+				<h4> Sightings </h4>
+				<div class="checkbox-container">
+					<div class="checkbox-liner">
+						<label for="huuli_hoarder">Huuli Hoarder</label>
+						<input type="checkbox" id="huuli_hoarder">
+					</div>
+					<div class="checkbox-liner">
+						<label for="tyrant_weed">Tyrant Weed</label>
+						<input type="checkbox" id="tyrant_weed">
+					</div>
+					<div class="checkbox-liner">
+						<label for="crassus_detonator">Crassus Detonator</label>
+						<input type="checkbox" id="crassus_detonator">
+					</div>
+					<div class="checkbox-liner">
+						<label for="err_cube">Error Cube</label>
+						<input type="checkbox" id="err_cube">
+					</div>
+					<div class="checkbox-liner">
+						<label for="bittergem">Bittergem</label>
+						<input type="checkbox" id="bittergem">
+					</div>
+				</div>
+				<h4> Additional Notes </h4>
+				<input type="text" id="notes" placeholder="Notes (Optional)">
+
+				<button type="submit">Publish Seed Entry</button>
+			</form>
+		</div>
+	</div>
+
+	<h2>Seeds</h2>
+	<table id="seedsTable">
+		<thead>
+			<tr>
+				<th>Game Version</th>
+				<th>G, M, P, S#</th>
+				<th>Primary Mission</th>
+				<th>Secondary Mission</th>
+				<th>Complexity</th>
+				<th>Length</th>
+				<th>Machine Event</th>
+				<th>Data Cell</th>
+				<th>Core Stone</th>
+				<th>Plagueheart</th>
+				<th>Huuli Hoarder</th>
+				<th>Tyrant Weed</th>
+				<th>Crassus Detonator</th>
+				<th>Error Cube</th>
+				<th>Bittergem</th>
+				<th>Date Added</th>
+				<th>Date Modified</th>
+				<th>Notes</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="script.js"></script>
+	</section>
+	<section id="background">
+</body>
+</html>
